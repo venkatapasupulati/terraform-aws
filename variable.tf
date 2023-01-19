@@ -19,3 +19,7 @@ variable "vpc_id" {
     default = "vpc-026abacf41e619505"
   
 }
+
+variable "private_key_path" {
+  default = "/Users/harikishanpv/terraform-aws/hari-key.pem"
+}
