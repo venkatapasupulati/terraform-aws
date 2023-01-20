@@ -53,8 +53,9 @@ connection {
     # install java, create dir
   provisioner "remote-exec" {
     inline = [
-      "sudo yum update -y",
-      "sudo yum install java-1.8.0-openjdk",      
+      
+      #"sudo yum install java-1.8.0-openjdk",      
+      "sudo amazon-linux-extras install java-openjdk11 -y",
       "mkdir data",
       "cd data"
       
@@ -64,12 +65,19 @@ connection {
   provisioner "file" {
     # source      = "/mnt/c/Java/Sources/sources_aws/aws-io-file/target/io-file-copy-1.0-SNAPSHOT.jar"
     source = "/Users/harikishanpv/eclipse-workspace/springbootrepo/firstspringboot/target/firstspringboot-0.0.1-SNAPSHOT.jar"
-    destination = "/home/ec2-user/data/firstspringboot-0.0.1-SNAPSHOT.jar"
+    destination = "/home/ec2-user/firstspringboot-0.0.1-SNAPSHOT.jar"
   }
 
    provisioner "remote-exec" {
     inline = [
-      "nohup java -jar firstspringboot-0.0.1-SNAPSHOT.jar &",
+      
+      # "nohup java -jar firstspringboot-0.0.1-SNAPSHOT.jar &",
+      "echo starting java",
+      "sudo nohup java -jar /home/ec2-user/firstspringboot-0.0.1-SNAPSHOT.jar > out.log 2>&1 &",
+      "sleep 5",
+      "echo completed"
+      
+
     ]
   }
 
