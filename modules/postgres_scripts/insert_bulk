@@ -1,0 +1,17 @@
+INSERT INTO employee(user_id, full_name, email,created_on,last_login)
+VALUES (1, 'hari', 'abc@123.com',CURRENT_DATE,CURRENT_TIMESTAMP);
+
+INSERT INTO employee(user_id, full_name, email,created_on,last_login)
+VALUES (2, 'kishan', 'kishan@123.com',CURRENT_DATE,CURRENT_TIMESTAMP);
+
+INSERT INTO employee(user_id, full_name, email,created_on,last_login)
+VALUES (3, 'babu', 'babu@123.com',CURRENT_DATE,CURRENT_TIMESTAMP);
+
+INSERT INTO employee(user_id, full_name, email,created_on,last_login)
+VALUES (4, 'test', 'test@123.com',CURRENT_DATE,CURRENT_TIMESTAMP);
+
+INSERT INTO employee(user_id, full_name, email,created_on,last_login)
+VALUES (5, 'test2', 'test1@123.com',CURRENT_DATE,CURRENT_TIMESTAMP);
+
+INSERT INTO employee(user_id, full_name, email,created_on,last_login)
+VALUES (6, 'test10', 'test10@123.com',CURRENT_DATE,CURRENT_TIMESTAMP);

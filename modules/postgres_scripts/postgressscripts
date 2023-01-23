@@ -1,0 +1,10 @@
+CREATE TABLE employee (
+	user_id INT NOT NULL,
+	full_name VARCHAR ( 50 )  NOT NULL,
+	email VARCHAR ( 255 )  NOT NULL,
+	created_on TIMESTAMP NOT NULL,
+        last_login TIMESTAMP 
+);
+
+INSERT INTO employee(user_id, full_name, email,created_on,last_login)
+VALUES (1, "hari", "abc@123.com",sysdate,sysdate);
