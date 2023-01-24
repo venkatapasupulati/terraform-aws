@@ -26,7 +26,7 @@ module "ec2_module" {
   
 }
 
-module "posgtress_module" {
+module "postgress_module" {
   source = "/Users/harikishanpv/terraform-aws/modules/postgress"
 
   #main_sec_grp = aws_security_group.ecs_instance.id
